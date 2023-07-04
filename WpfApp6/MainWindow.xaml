@@ -1,0 +1,32 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp6"
+        xmlns:ui="http://schemas.modernwpf.com/2019"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation" x:Class="WpfApp6.MainWindow"
+        mc:Ignorable="d"
+        Title="Eon" Height="413" Width="708"
+        ui:WindowHelper.UseModernWindowStyle="True" ResizeMode="NoResize">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="315*"/>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition Width="481*"/>
+        </Grid.ColumnDefinitions>
+        <ui:NavigationView x:Name="NavView" Loaded="NavView_Loaded" SelectionChanged="NavView_SelectionChanged" PaneDisplayMode="Left" IsBackButtonVisible="Collapsed" IsPaneToggleButtonVisible="False" IsPaneOpen="True" HorizontalAlignment="Left" Width="800" Grid.ColumnSpan="4">
+            <ui:NavigationView.MenuItems>
+                <ui:NavigationViewItem Icon="Play" Content="Home" Tag="Home"/>
+            </ui:NavigationView.MenuItems>
+        </ui:NavigationView>
+        <ui:Frame x:Name="ContentFrame" Margin="41,0,0,0" Height="397.04" Grid.Column="3">
+            <ui:Frame.ContentTransitions >
+                <ui:TransitionCollection>
+                    <ui:NavigationThemeTransition />
+                </ui:TransitionCollection>
+            </ui:Frame.ContentTransitions>
+        </ui:Frame>
+    </Grid>
+</Window>
