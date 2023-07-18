@@ -32,7 +32,7 @@ namespace WpfApp6
 		{
 			InitializeComponent();
 
-			WebClient omg = new WebClient();
+		/*	WebClient omg = new WebClient();
 			try
 			{
 				string fds = omg.DownloadString("http://api.eonfn.com/eon/version");
@@ -51,7 +51,7 @@ namespace WpfApp6
 			{
 				MessageBox.Show("Failed Connecting To Eon Servers, Please Check The Discord");
 				Application.Current.Shutdown();
-			}
+			}*/
 			
 		}
 
